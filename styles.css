@@ -60,7 +60,7 @@ main .hero figure figcaption {
 }
 main .hero figure img {
   height: 65vh;
-  width: calc(100vw - 810px);
+  width: calc(100vw - 825px);
 }
 main .hero-about {
   display: flex;
