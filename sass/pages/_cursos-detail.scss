@@ -1,0 +1,62 @@
+@use "../base/colors" as colors;
+
+.curso-detail-container {
+    min-height: calc(100vh - 196px);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-block: 64px;
+    gap: 32px;
+
+    img {
+        min-width: 400px
+    }
+    p{
+        text-align: start !important;
+    }
+
+    .curso-detail-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 48px;
+
+        p {
+            a {
+                color: colors.$white;
+                text-decoration: none;
+                padding: 16px;
+                font-weight: 700;
+                transition: all 0.3s ease-in-out;
+                background-color: colors.$primary;
+
+                &:hover {
+                    background-color: colors.$tertiary ;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .curso-detail-container{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-block: 8px;
+
+        img {
+            min-width: 250px;
+            width: 100%;
+        }
+
+        .curso-detail-wrapper {
+            align-items: center;    
+            padding-inline: 32px;
+            padding-bottom: 32px;
+         }
+    }
+
+}

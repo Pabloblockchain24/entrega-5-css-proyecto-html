@@ -1,0 +1,89 @@
+@use "../base/colors" as colors;
+
+.blogs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-block: 64px;
+    gap: 64px;
+    min-height: calc(100vh - 196px);
+
+    .blogs-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        h1{
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: colors.$primary;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    .blogs-list{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+
+            article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 32px;
+                max-width: 300px;  
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                gap: 8px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+                h3{
+                    text-align: center;
+                }
+                
+                p{
+                    margin-block: 16px;
+                    text-align: center;
+                    font-size: 14px;
+                    a{
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: colors.$grey;
+                        background-color: colors.$primary;
+                        padding: 10px;
+
+                        &:hover {
+                            background-color: colors.$tertiary;
+                            color: white;
+                            transition: 200ms ease-in-out;
+                        }
+                    }
+                }
+                &:hover {
+                    transform: translateY(-4px);
+                    background-color: colors.$primary-hover;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+                }
+            }
+    }
+}
+
+@media screen and (max-width: 1028px) {
+    .blogs-container{
+        .blogs-list{
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blogs-container {
+        padding-block: 16px;
+    }
+}

@@ -1,0 +1,36 @@
+@use "../base/colors" as colors;
+
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px 48px 32px;  
+    gap: 24px;
+    min-height: calc(100vh - 166px);
+
+    img{
+        width: 100%;
+        aspect-ratio: 1;
+        max-width: 400px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        color: colors.$primary;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-container {
+        padding: 16px 16px 48px 16px;
+        gap: 32px;
+
+        p {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@use "../base/colors" as colors;
+
+
+.quienes-somos {
+    min-height: calc(100vh - 196px);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+    padding-block: 64px;
+
+    h1 {
+        font-size: 2.5rem;
+        color: colors.$primary;
+        text-align: center;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        padding-top: 32px;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            background-color: colors.$primary;
+            color: colors.$grey;
+            padding: 32px 16px;
+            width: 32%;
+            min-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            h3 {
+                font-size: 1.5rem;
+                color: colors.$tertiary;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                font-size: 1.1rem;
+                color: colors.$grey;
+                line-height: 1.5;
+                padding-block: 1rem;
+            }
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+
+        }
+
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .quienes-somos {
+        padding-block: 16px;
+    }
+}

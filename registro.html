@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title> Registro | Conquer Blocks </title>
+    <meta name="description" content="Registrate para formar parte de nuestros cursos">
+    <link rel="icon" href="./assets/img/logo-conquer.png" sizes="any">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>  
+    <header>
+        <figure>
+            <a href="/">
+                <img src="./assets/img/logo-conquer.png" alt="logoConquer" width="150px">
+            </a>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="quienes-somos.html">Quienes Somos</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li>Registro</li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="registro-container">
+        <h1>Formulario de Registro</h1>
+        <form action="post" enctype="multipart/form-data">
+            <p>
+                <input type="text" name="name" id="name" placeholder=" Ingresa nombre completo" required>
+            </p>
+            <p>          
+                <input type="email" name="email" id="email" placeholder="Ingresa tu correo" required>
+            </p>
+            <p>          
+                <input type="text" name="address" id="address" placeholder="Ingresa tu ciudad" required>
+            </p>
+            <p>          
+                <input type="url" name="web" id="web" placeholder="Ingresa tu web" required>
+            </p>
+            <p>      
+                <label for="birthday">Fecha de nacimiento: </label>    
+                <input type="date" name="birthday" id="birthday" placeholder="Fecha de nacimiento" required>
+            </p>
+            <p>          
+                <label for="photo">Foto de usuario: </label>
+                <input type="file" name="photo" id="photo">
+            </p>
+
+            <p> <button> Enviar </button></p>
+        </form>
+    </main>
+
+
+    <footer>
+        <p> © Conquer Crypto 2023 </p>
+        <a href="aviso-legal.html">Aviso Legal</a>
+    </footer>
+    
+</body>
+</html>

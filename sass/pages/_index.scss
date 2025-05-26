@@ -1,0 +1,372 @@
+@use "../base/colors" as colors;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 32px;
+    padding-inline: 16px;
+
+    figure{
+        z-index: 2;
+        
+    }
+
+    nav {
+        z-index: 2;
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 10px;
+
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: colors.$primary;
+
+                    &:hover {
+                        color: colors.$green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: colors.$grey;
+        padding-block: 40px;
+        height: 50vh;
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: colors.$primary;
+            padding-inline: 48px;
+            line-height: 60px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            color: colors.$primary;
+            padding: 32px 48px;
+        }
+
+        figure {
+            position: absolute;
+            opacity: 0.2;
+            top: 0;
+            z-index: -1;
+
+            figcaption {
+                display: none;
+            }
+
+            img {
+                height: calc(65vh);
+                width: calc(100vw - 810px);
+            }
+        }
+
+    }
+
+    .hero-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: colors.$primary;
+        color: colors.$grey;
+        width: 100%;
+        gap: 30px;
+        padding: 32px;
+
+        h2{
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                color: colors.$primary;
+                background-color: colors.$green;
+                padding: 10px 20px;
+
+                &:hover {
+                    background-color: colors.$tertiary;
+                    color: colors.$grey;
+                    transition: 200ms ease-in-out;
+                }
+            }
+        }
+
+    }
+
+    .hero-courses {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: colors.$green;
+        color: colors.$grey;
+        gap: 24px;
+        padding-block: 32px;
+        width: 100%;
+
+        section {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            gap: 12px;
+
+            article {
+                background-color: colors.$primary;
+                padding: 24px;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                gap: 12px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+                h3 {
+                    text-align: center;
+                }
+
+                p:nth-child(3) {
+                    margin-top: 24px;
+
+                    a {
+                        border-radius: 6px;
+                        font-size: 14px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        color: colors.$primary;
+                        background-color: colors.$grey;
+                        padding: 10px;
+
+                        &:hover {
+                            background-color: colors.$tertiary;
+                            color: white;
+                            transition: 200ms ease-in-out;
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    .hero-news {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: colors.$primary;
+        gap: 24px;
+        padding-block: 32px;
+
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+
+            article {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                gap: 24px;
+                background-color: colors.$white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                padding-bottom: 24px;
+                flex: 1;
+
+                h3{
+                    padding-inline: 16px;
+                }
+                p{
+                    padding-inline: 16px;
+                    padding-bottom: 16px;
+
+                    a{
+                        text-decoration: none;
+                        padding: 12px;
+                        background-color: colors.$primary;
+                        color: white;
+                        &:hover {
+                            background-color: colors.$green;
+                            transition: 200ms ease-in-out;
+                        }
+                    }
+                }	
+
+                img{
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+        }
+
+    }
+}
+
+footer{
+    background-color: colors.$primary;
+    color: colors.$grey;
+    text-align: center;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    a{
+        text-decoration: none;
+        font-weight: bold;
+        color: colors.$grey;
+    }
+ }
+
+@media screen and (max-width: 1600px) {
+
+main{
+    .hero{
+        figure{
+            img{
+                width: calc(100vw - 220px);
+            }
+        }
+    }
+}    
+}
+
+@media screen and (max-width: 1028px) {
+ header{
+    nav{
+        ul{
+            li {
+                margin: 0 5px;
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+ }
+
+ main{
+
+    .hero-about{
+        p{
+            a{
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+    }
+    .hero-courses{
+        section{
+            flex-direction: column;
+            article {
+                margin-inline: 32px;
+            }
+        }
+
+    }
+    .hero-news{
+        p{
+            text-align: center;
+            margin-inline: 32px;
+
+        }
+        section{
+            flex-direction: column;
+            gap: 24px;
+            article {
+                margin-inline: 32px;
+                h3{
+                    text-align: center;
+                    padding-inline: 8px;
+                }
+                p{
+                    text-align: center;
+                    padding-inline: 4px;
+
+                }
+            }
+        }
+    }
+ }
+}
+
+
+@media screen and (max-width: 768px) {
+ header{
+        flex-direction: column;
+
+        figure{
+            margin-bottom: 16px;
+        }
+
+        nav{
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                li {
+                    margin: 5px 0;
+                }
+            }
+        }
+ }
+ main{
+    .hero{
+        padding-block: 0px;
+        height: 30vh;
+
+        figure{
+            img{
+                height: calc(80vh);
+                width: calc(100vw - 64px);
+            }
+        }
+    }
+    .hero-about{
+        p{
+            padding: 0 16px;
+        }
+    }
+    .hero-courses{
+        section{
+            article{
+                padding: 24px 12px;
+
+            }
+        }
+        p{
+            text-align: center;
+            padding: 0 16px;
+        }
+    }
+ }
+    
+}
+
